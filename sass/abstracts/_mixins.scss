@@ -129,12 +129,12 @@
       span.icon-box      { background-color: $color-black; }
     }
   } @else if $type == 'prev' {
-    span.icon-box      { background-color: $color-orange; }
     span:not(.icon-box) { background-color: $color-black; }
+    span.icon-box      { background-color: $color-orange; }
 
     &:hover {
-      span.icon-box      { background-color: $color-black; }
       span:not(.icon-box) { background-color: $color-orange; }
+      span.icon-box      { background-color: $color-black; }
     }
   }
 } 

@@ -37,4 +37,61 @@
             margin: 0;
         }
     }
+
+    @include breakpoint(tablet) {
+        max-width: 100%;
+        padding: 56px 40px;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start; 
+        justify-content: space-between; 
+
+        & > figure {
+            width: 110px;
+            flex-shrink: 0; 
+            margin-right: 60px; 
+        }
+
+        & p {
+            margin: 0; 
+            margin-right: auto; 
+            max-width: 280px; 
+            font-size: 16px;
+            text-align: left;
+        }
+
+        & .social-container {
+            margin-left: 40px; 
+            align-self: flex-start; 
+        }
+    }
+
+    @include breakpoint(desktop) {
+        max-width: 1440px;
+        height: 244px;
+        margin: 0 auto;
+        padding: 80px 165px; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        & > figure {
+            margin-right: 140px; 
+            margin-top: 0; 
+            flex-shrink: 0;
+        }
+
+        & p {
+            margin: 0; 
+            max-width: 430px;
+            text-align: left;
+        }
+
+        & .social-container {
+            margin-left: 280px;
+            align-self: flex-start; 
+        }
+    }
 }

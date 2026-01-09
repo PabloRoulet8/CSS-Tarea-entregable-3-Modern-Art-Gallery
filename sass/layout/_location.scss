@@ -46,4 +46,111 @@
             }
         }
     }
+
+    @include breakpoint(tablet) {
+        max-width: 100%;
+
+        & .location-map {
+            width: 100%;
+            
+            & .orange-button {
+                position: absolute;
+                top: 0; 
+                left: 39px;
+            }
+        }
+
+        & .location-text {
+            height: auto; 
+            padding: 120px 40px; 
+            
+            display: flex; 
+            flex-direction: row; 
+            align-items: flex-start; 
+            justify-content: space-between; 
+            text-align: left; 
+
+            & h2 {
+                flex: 0 0 auto; 
+                width: 250px; 
+                margin-bottom: 0; 
+                font-size: 50px;
+            }
+
+            & .location-info {
+                flex: 1; 
+                max-width: 450px; 
+                margin-top: 0; 
+
+                & h3 {
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+
+                & p {
+                    margin-bottom: 0;
+                }
+                
+                & p:last-child {
+                    margin-top: 30px; 
+                }
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        max-width: 100%;
+
+        & .location-map {
+            width: 1440px;
+            height: 600px;
+            background-image: url("../img/mapa2.png");
+            
+            & .orange-button {
+                position: absolute;
+                top: 0; 
+                left: 156px;
+            }
+        }
+
+        & .location-text {
+            height: auto; 
+            padding: 104px 165px 128px 165px; 
+            display: flex; 
+            flex-direction: row; 
+            align-items: flex-start; 
+            justify-content: space-around; 
+            text-align: left;
+
+            & h2 {
+                flex: 0 0 auto; 
+                width: 350px; 
+                margin-bottom: 0; 
+                font-size: 70px;
+                line-height: 70px;
+            }
+
+            & .location-info {
+                flex: 1; 
+                max-width: 450px; 
+                margin-top: 0; 
+
+                & h3 {
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                }
+
+                & p {
+                    margin-bottom: 0;
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+                
+                & p:last-child {
+                    width: 540px;
+                    margin-top: 30px; 
+                }
+            }
+        }
+    }
 }
