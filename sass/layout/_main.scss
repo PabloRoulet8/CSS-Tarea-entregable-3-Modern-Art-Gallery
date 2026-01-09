@@ -1,0 +1,109 @@
+.hero-container {
+    max-width: 480px;
+    min-width: 320px;
+
+    & .hero-img {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 30px;
+
+        & figure {
+            height: 100%; 
+            margin: 0;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+                object-position: center;
+            }
+        }      
+    }
+
+    & .hero-text {
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+
+        & h1 {
+            @include heading-style(M);
+            margin-bottom: 30px;
+        }
+
+        & p {
+            @include body-style(S);
+            color: $color-gray;
+            margin-bottom: 30px;
+        }
+        & .black-button a {
+            @include gallery-button-style('next');
+        }
+    }
+}
+
+.grid-container {
+    max-width: 480px;
+    min-width: 320px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    & img {
+        width: 343px;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    & .first-img {
+        margin-bottom: 25px;
+
+        & .grid-img figure {
+            margin: 0;
+        }
+    } 
+
+    & .grid-text {
+        margin-bottom: 32px;
+
+        & h2 {
+            @include heading-style(M);
+            font-size: 50px;
+            margin-bottom: 16px;
+        }
+
+        & p {
+            @include body-style(S);
+            color: $color-gray;
+        }
+
+    }
+
+    & .second-img {
+
+        & img {
+            margin-bottom: 16px;
+        }
+
+        & .grid-text2 {
+            background-color: $color-black;
+            padding: 48px 24px 47px 24px;
+            margin-bottom: 120px;
+
+            & h2 {
+                @include heading-style(M);
+                font-size: 50px;
+                margin-bottom: 16px;
+                color: $color-white;
+            }
+
+            & p {
+                @include body-style(S);
+                color: $color-white;
+            }
+        }
+    }
+}

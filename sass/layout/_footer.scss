@@ -1,0 +1,22 @@
+.footer-container {
+    background-color: $color-black;
+    padding: 48px 32px;
+
+    & p {
+        @include body-style(S);
+        font-size: 16px;
+        color: $color-white;
+        margin-top: 38px;
+        margin-bottom: 38px;
+    }
+
+    & .social-container {
+        display: flex;
+        gap: 16px;
+
+        & img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

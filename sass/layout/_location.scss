@@ -1,0 +1,5 @@
+.location-map {
+    & .orange-button a {
+        @include gallery-button-style('prev');
+    }
+}

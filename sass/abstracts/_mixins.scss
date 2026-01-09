@@ -38,3 +38,103 @@
     }
   }
 }
+
+@mixin reset-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
+
+@mixin heading-style($size) {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  @if $size == XL {
+    font-size: $headingXL-font-size;
+    line-height: $headingXL-line-height;
+  } @else if $size == L {
+    font-size: $headingL-font-size;
+    line-height: $headingL-line-height;
+  } @else if $size == M {
+    font-size: $headingM-font-size;
+    line-height: $headingM-line-height;
+  } @else if $size == S {
+    font-size: $headingS-font-size;
+    line-height: $headingS-line-height;
+  }
+}
+
+@mixin body-style($size) {
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  @if $size == M {
+    font-size: $bodyM-font-size;
+    line-height: $bodyM-line-height;
+  } @else if $size == S {
+    font-size: $bodyS-font-size;
+    line-height: $bodyS-line-height;
+  }
+}
+
+@mixin gallery-button-style($type: 'next') {
+  display: inline-block;
+  text-decoration: none;
+  height: 72px; 
+  cursor: pointer;
+  
+  p {
+    margin: 0;
+    display: flex;
+    align-items: stretch; 
+    height: 100%;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: $heading-font-family; 
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 3px; 
+    text-transform: uppercase;
+    color: $color-white; 
+
+    &:not(.icon-box) {
+      padding: 0 35px; 
+    }
+
+    &.icon-box {
+      width: 72px; 
+      min-width: 72px;
+      
+      img {
+        filter: brightness(0) invert(1); 
+        width: 10px; 
+        height: auto;
+      }
+    }
+  }
+
+  @if $type == 'next' {
+    span:not(.icon-box) { background-color: $color-black; }
+    span.icon-box      { background-color: $color-orange; }
+
+    &:hover {
+      span:not(.icon-box) { background-color: $color-orange; }
+      span.icon-box      { background-color: $color-black; }
+    }
+  } @else if $type == 'prev' {
+    span.icon-box      { background-color: $color-orange; }
+    span:not(.icon-box) { background-color: $color-black; }
+
+    &:hover {
+      span.icon-box      { background-color: $color-black; }
+      span:not(.icon-box) { background-color: $color-orange; }
+    }
+  }
+} 
