@@ -1,5 +1,49 @@
-.location-map {
-    & .orange-button a {
-        @include gallery-button-style('prev');
+.location-container {
+    max-width: 480px;
+    min-width: 320px;
+
+    & .location-map {
+        background-image: url("../img/mapa.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 550px;
+
+        & .orange-button a {
+            @include gallery-button-style('prev');
+        }
+    }
+
+    & .location-text {
+        background-color: $color-black;
+        height: 493px;
+        padding-top: 48px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        & h2 {
+            @include heading-style(M);
+            font-size: 50px;
+            margin-bottom: 16px;
+            color: $color-white;
+            margin-bottom: 48px;
+        }
+
+        & .location-info {
+            color: $color-white;
+            @include body-style(S);
+
+            & h3 {
+                @include heading-style(S);
+                font-size: 32px;
+                color: $color-orange;
+                margin-bottom: 20px;
+            }
+
+            & p:last-child {
+                margin-top: 20px;
+            }
+        }
     }
 }

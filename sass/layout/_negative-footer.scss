@@ -1,0 +1,42 @@
+.negative-footer-container {
+    background-color: $color-orange;
+    padding: 48px 32px;
+    max-width: 480px; 
+    width: 100%;
+
+    & > figure {
+        margin: 0; 
+        width: 110px; 
+        
+        & img {
+            width: 100%; 
+            height: auto;
+            display: block;
+            filter: brightness(0);
+        }
+    }
+
+    & p {
+        @include body-style(S);
+        font-size: 16px;
+        color: $color-black;
+        margin-top: 38px;
+        margin-bottom: 38px;
+    }
+
+    & .social-container {
+        display: flex;
+        gap: 16px;
+
+        & img {
+            width: 20px;
+            height: 20px;
+            display: block; 
+            filter: brightness(0);
+        }
+        
+        & figure {
+            margin: 0;
+        }
+    }
+}

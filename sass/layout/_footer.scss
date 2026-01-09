@@ -1,6 +1,19 @@
 .footer-container {
     background-color: $color-black;
     padding: 48px 32px;
+    max-width: 480px; 
+    width: 100%;
+
+    & > figure {
+        margin: 0; 
+        width: 110px; 
+        
+        & img {
+            width: 100%; 
+            height: auto;
+            display: block;
+        }
+    }
 
     & p {
         @include body-style(S);
@@ -17,6 +30,11 @@
         & img {
             width: 20px;
             height: 20px;
+            display: block; 
+        }
+        
+        & figure {
+            margin: 0;
         }
     }
 }
